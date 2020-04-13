@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/zhs/esb-protobufs#readme",
   "dependencies": {
+    "proto-parse": "0.0.5",
     "protobufjs": "^6.8.8"
   }
 }
