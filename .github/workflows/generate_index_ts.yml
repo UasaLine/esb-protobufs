@@ -51,6 +51,6 @@ jobs:
           git add --all
     - name: push diff
       run: |
-          git commit -m "gen index.d.ts on $(date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "genrate index.d.ts on $(date +'%Y-%m-%d %H:%M:%S')"
           git push   
       
