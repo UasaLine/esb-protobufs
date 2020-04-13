@@ -43,14 +43,5 @@ jobs:
     - run: npm install
     - run: node app.js
       env:
-        CI: true
-    - name: Set git config and add changes
-      run: |
-          git config --global user.email "${GITHUB_ACTOR}@https://users.noreply.github.com/"
-          git config --global user.name "${GITHUB_ACTOR}"
-          git add --all
-    - name: push diff
-      run: |
-          git commit -m "genrate index.d.ts on $(date +'%Y-%m-%d %H:%M:%S')"
-          git push   
+        CI: true  
       
