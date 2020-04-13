@@ -25,3 +25,22 @@ jobs:
     - run: npm run build --if present
       env:
         CI: true
+    
+  
+  gen:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: guahanweb/action-nodejs-gh-pages@1.0.0
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: node app.js
+      env:
+        CI: true
