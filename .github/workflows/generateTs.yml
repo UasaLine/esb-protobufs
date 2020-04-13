@@ -27,7 +27,7 @@ jobs:
         CI: true
     
   
-  gen:
+  generate-index-d-ts:
     runs-on: ubuntu-latest
 
     strategy:
