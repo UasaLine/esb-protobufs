@@ -2,8 +2,8 @@
 const protoFilesPath = "/Users/urijsalagaev/IdeaProjects/esb-protobufs/proto";
 const tsFilesPath = "/Users/urijsalagaev/IdeaProjects/esb-protobufs/typescript";
 const fs = require("fs");
-const prettier = require("prettier");
 const parse = require("proto-parse");
+const prettier = require("prettier");
 const resultList = [];
 const insertAfterObject = [];
 
