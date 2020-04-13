@@ -42,13 +42,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: node app.js
+      env:
+        CI: true
     - name: push diff
       
     - run: |
           COMMIT_MESSAGE="gen index.d.ts on $(date +'%Y-%m-%d %H:%M:%S')"
           git add --all  
           git commit -m "$(COMMIT_MESSAGE)" 
-          git push 
-    - env:
-        CI: true    
+          git push   
       
