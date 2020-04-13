@@ -45,8 +45,7 @@ jobs:
       env:
         CI: true
     - name: push diff
-      
-    - run: |
+      run: |
           COMMIT_MESSAGE="gen index.d.ts on $(date +'%Y-%m-%d %H:%M:%S')"
           git add --all  
           git commit -m "$(COMMIT_MESSAGE)" 
