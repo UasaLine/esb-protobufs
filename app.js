@@ -1,6 +1,7 @@
 //1.get list files proto
 const protoFilesPath = "./proto";
 const tsFilesPath = "./typescript";
+const generateFileName = "index.d.ts";
 const fs = require("fs");
 const parse = require("proto-parse");
 const prettier = require("prettier");
@@ -18,8 +19,8 @@ async function run(path) {
     readeProtoFile(protoFilesPath + "/" + protoFile.name);
   }
 
-  writeFile("index-test.ts");
-  format("index-test.ts");
+  writeFile(generateFileName);
+  format(generateFileName);
 }
 
 //2. reade file using proto-parse
